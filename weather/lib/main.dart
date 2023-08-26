@@ -37,6 +37,8 @@ Column _bodyBuilding() {
       _cityDetail(),
       SizedBox(height: 30,),
       Padding(padding: EdgeInsets.only(left: 70, right: 70),child: _weatherDetail(),),
+      SizedBox(height: 30,),
+      _extraWeatherDetails(),
     ],
   );
 }
@@ -83,4 +85,27 @@ Row _weatherDetail() {
   );
 }
 
-
+Row _extraWeatherDetails() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+    Column(
+      children: [
+        Image.asset("assets/icons/wind.png", color: Colors.white, width: 25,),
+        Text("5", style: TextStyle(color: Colors.white, fontSize: 25),),
+        Text("km/hr", style: TextStyle(color: Colors.white, fontSize: 25),)
+    ],),
+    Column(
+      children: [
+        Image.asset("assets/icons/wind.png", color: Colors.white, width: 25,),
+        Text("5", style: TextStyle(color: Colors.white, fontSize: 25),),
+        Text("km/hr", style: TextStyle(color: Colors.white, fontSize: 25),)
+    ],),
+    Column(
+      children: [
+        Image.asset("assets/icons/wind.png", color: Colors.white, width: 25,),
+        Text("5", style: TextStyle(color: Colors.white, fontSize: 25),),
+        Text("km/hr", style: TextStyle(color: Colors.white, fontSize: 25),)
+    ],)
+  ],);
+}
