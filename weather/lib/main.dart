@@ -34,7 +34,9 @@ Column _bodyBuilding() {
         padding: EdgeInsets.all(20),
         child: _textFieldWidget(),
       ),
-      _cityDetail()
+      _cityDetail(),
+      SizedBox(height: 30,),
+      Padding(padding: EdgeInsets.only(left: 70, right: 70),child: _weatherDetail(),),
     ],
   );
 }
@@ -67,3 +69,18 @@ Column _cityDetail() {
     ],
   );
 }
+
+Row _weatherDetail() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      const Icon(Icons.sunny, size: 120, color: Colors.white,),
+      Column( children: const [
+        Text("25 ℃", style: TextStyle(fontSize: 60, color: Colors.white),),
+        Text('Sunny', style: TextStyle(fontSize: 35, color: Colors.white),)
+      ],)
+    ],
+  );
+}
+
+
