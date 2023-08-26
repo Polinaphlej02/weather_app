@@ -34,6 +34,7 @@ Column _bodyBuilding() {
         padding: EdgeInsets.all(20),
         child: _textFieldWidget(),
       ),
+      _cityDetail()
     ],
   );
 }
@@ -54,9 +55,15 @@ TextField _textFieldWidget() {
 
 Column _cityDetail() {
   return Column(
-    children: [
-      Text("Minsk"),
-      Text("Saturday, August, 2023"),
+    children: const [
+      Text("Minsk", style: TextStyle(
+        fontSize: 40, 
+        color: Colors.white,
+      ),),
+      Text("Saturday, August, 2023", style: TextStyle(
+        fontSize: 20,
+        color: Colors.white,
+      ),),
     ],
   );
 }
