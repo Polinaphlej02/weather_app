@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        resizeToAvoidBottomInset : false,
         backgroundColor: Color.fromARGB(255, 255, 99, 88),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 202, 62, 52),
