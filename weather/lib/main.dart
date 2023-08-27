@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
             "Weather",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Chalkduster Rus',
-                fontSize: 25),
+                fontSize: 33),
           ),
           centerTitle: true,
         ),
@@ -37,15 +36,15 @@ Column _bodyBuilding() {
       ),
       _cityDetail(),
       SizedBox(
-        height: 30,
+        height: 60,
       ),
       _weatherDetail(),
       SizedBox(
-        height: 30,
+        height: 40,
       ),
       _extraWeatherDetails(),
       SizedBox(
-        height: 45,
+        height: 90,
       ),
       Container(
         child: Center(
@@ -57,6 +56,7 @@ Column _bodyBuilding() {
         ),
       ),
       Expanded(child: _someDaysWeather()),
+      SizedBox(height: 65,),
     ],
   );
 }
@@ -186,23 +186,25 @@ Row _extraWeatherDetails() {
 }
 
 Widget _someDaysWeather() {
-  final List items = List.generate(3, (index) => ["Saturday", '15', "℃"]);
+  final List items = List.generate(3, (index) => ["Saturday", "15", "C"]);
 
   return ListView.builder(
     scrollDirection: Axis.horizontal,
     itemExtent: 180,
     itemCount: items.length,
     itemBuilder: (context, index){
-      return Card(
-        child: ListTile(
-          tileColor: Color.fromARGB(255, 221, 216, 216),
+      return Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(5),
+          child: ListTile(
+          tileColor: Colors.grey.withOpacity(0.4),
         title: Text(
-          "$items[0]",
+          "${items[index][0]}",
          style: TextStyle(color: Colors.white, fontSize: 30),
       ),
        subtitle: RichText(
         text: TextSpan(
-        text: "${items[1]} ${items[2]}",
+        text: "${items[index][1]} ${items[index][2]}",
         style: TextStyle(color: Colors.white, fontSize: 30),
         children: [
             WidgetSpan(child: Icon(Icons.sunny, color: Colors.white, size: 35,),)
