@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -9,14 +8,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset : false,
-        backgroundColor: Color.fromARGB(255, 255, 99, 88),
+        backgroundColor: Color.fromARGB(255, 53, 51, 51),
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 202, 62, 52),
+          backgroundColor: Color.fromARGB(255, 86, 19, 14),
           title: const Text(
             "Weather",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 33),
+                fontSize: 30),
           ),
           centerTitle: true,
         ),
@@ -198,7 +197,7 @@ Widget _someDaysWeather() {
         alignment: Alignment.center,
         margin: EdgeInsets.all(5),
           child: ListTile(
-          tileColor: Colors.grey.withOpacity(0.4),
+          tileColor: Color.fromARGB(255, 139, 28, 20).withOpacity(0.3),
         title: Text(
           "${items[index][0]}",
          style: TextStyle(color: Colors.white, fontSize: 30),
