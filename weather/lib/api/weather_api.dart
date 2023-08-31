@@ -5,7 +5,7 @@ import 'package:weather/utilities/constants.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherAPI {
-  Future<WeatherForecast> getWeatherCity({required String city}) async {
+  Future<WeatherForecast> getWeatherWithCity({required String city}) async {
     var parameters = {
       'q': city,
       'appid':Constants.WEATHER_ID,

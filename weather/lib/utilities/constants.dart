@@ -3,6 +3,6 @@ class Constants {
   static const String WEATHER_BASIC = "https://";
   static const String WEATHER_DOMAIN =  "api.openweathermap.org";
   static const String WEATHER_BASIC_PATH = "/data/2.5/forecast/daily";
-  static const String WEATHER_iMAGES_PATH = "img/w";
+  static const String WEATHER_iMAGES_PATH = "/img/w/";
   static const String WEATHER_iMAGES_URL = WEATHER_BASIC + WEATHER_DOMAIN + WEATHER_iMAGES_PATH;
 }
