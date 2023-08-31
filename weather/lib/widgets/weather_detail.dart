@@ -23,11 +23,11 @@ class WeatherDetail extends StatelessWidget {
         children: [
           Text(
             "${temp} ℃",
-            style: TextStyle(fontSize: 60, color: Colors.white),
+            style: TextStyle(fontSize: 55, color: Colors.white),
           ),
           Text(
             '${weatherDescription}',
-            style: TextStyle(fontSize: 25, color: Colors.white),
+            style: TextStyle(fontSize: 20, color: Colors.white),
           )
         ],
       ))
